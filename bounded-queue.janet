@@ -32,7 +32,7 @@
             (put :read-i new-i))
         v))))
 
-(defn clear-queue
+(defn clear
   [queue]
   (-> queue
       (put :full false)
@@ -40,7 +40,7 @@
       (put :read-i 0)
       (update :items array/clear)))
 
-(defn make-queue
+(defn new
   [capacity]
   @{:items (array/new capacity)
     :capacity capacity

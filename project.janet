@@ -1,5 +1,5 @@
 (declare-project
-  :name "janet-fixed-queue")
+  :name "janet-bounded-queue")
 
 (declare-source
-  :source ["fixed-size-queue/fixed-size-queue.janet"])
+  :source ["bounded-queue.janet"])
