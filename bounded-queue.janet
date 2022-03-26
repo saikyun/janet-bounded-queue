@@ -32,6 +32,11 @@
             (put :read-i new-i))
         v))))
 
+(defn empty?
+  [{:read-i ri :write-i wi :full full}]
+  (and (not full)
+       (= ri wi)))
+
 (defn clear
   [queue]
   (-> queue
